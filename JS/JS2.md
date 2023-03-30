@@ -1,8 +1,4 @@
----
-layout : single
-title : "JavaScript #2"
-categories: JavaScript
----
+
 <br> 
 <h1>JavaScript</h1>
 <br>
