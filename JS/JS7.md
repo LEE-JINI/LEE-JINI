@@ -41,7 +41,7 @@
 <img src="/Img/JS7_1-1.png" width="300px"> <img src="/Img/JS7_1-2.png" width="300px">
 </dvi>
 
-<br>
+<br><br>
 
 ```html
 <h1> 더보기 버튼 </h1>
@@ -92,7 +92,8 @@
 ```
 <img src="/Img/JS7_2-1.png" width="300px">
 <img src="/Img/JS7_2-2.png" width="300px">
-<br>
+
+<br><br>
 
 ```html
 <style>
@@ -162,10 +163,10 @@
     })
 </script>
 ```
-<img src="/Img/JS7_3-1.png" width="250px">
-<img src="/Img/JS7_3-2.png" width="250px">
+<img src="/Img/JS7_3-1.png" width="50px"> >
+<img src="/Img/JS7_3-2.png" width="350px">
 
-<br>
+<br><br>
 
 ```html
 <style>
@@ -221,8 +222,8 @@
     })
 </script>
 ```
-<img src="/Img/JS7_4-1.png" width="250px">
-<img src="/Img/JS7_4-2.png" width="250px">
+<img src="/Img/JS7_4-1.png" width="300px">
+<img src="/Img/JS7_4-2.png" width="300px">
 
 
 <h6>3/29 수업, 3/31 정리 복습</h6>
