@@ -161,7 +161,7 @@ value="구글 검색">
     input.value="네이버 검색"
 </script>
 ```
-<img src="/Img/JS6_1.png">
+<img src="/Img/JS6_1.png" width="200">
 
 <br>
 
