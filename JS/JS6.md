@@ -161,7 +161,9 @@ value="구글 검색">
     input.value="네이버 검색"
 </script>
 ```
-<img src="Img\JS6_1.png">
+<img src="/Img/JS6_1.png">
+
+<br>
 
 **classList**  
 엘리먼트의 클래스 리스트를 저장한다.
