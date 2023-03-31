@@ -161,7 +161,7 @@ value="구글 검색">
     input.value="네이버 검색"
 </script>
 ```
-<img src="/Img/JS6_1.png" width="200px">
+<img src="/Img/JS6_1.png" width="250px">
 
 <br>
 
@@ -201,6 +201,9 @@ value="구글 검색">
 </script>
 
 ```
+<img src="/Img/JS6_2.png" width="250px">
+
+<br>
 
 
 **createElement**  
@@ -221,8 +224,11 @@ value="구글 검색">
     li.appendChild(); // li 엘리먼트를 마지막 칠드런으로 주입함.
     console.log(li); // foo bar baz
 </script>
-
 ```
+<img src="/Img/JS6_3.png" width="250px">
+
+<br>
+
 **innerHtml**  
 문자열의 형태로 tree를 저장한다.
 ```html
@@ -252,6 +258,10 @@ value="구글 검색">
 
 </script>
 ```
+<img src="/Img/JS6_4.png" width="250px">
+
+<br>
+
 
 <br><br>
 
@@ -268,6 +278,12 @@ ex) 클릭, 스크롤, 터치 등
     }) // 화살표 함수
 </script>
 ```
+<img src="/Img/JS6_5.png" width="250px">
+
+<br>
+
+
+<br><br>
 
 <br><br>
 
@@ -304,6 +320,12 @@ html에서 자바스크립트를 이용해서 그래픽 표현 가능
 
 </script>
 ```
+<img src="/Img/JS6_6.png">
+
+<br>
+
+
+<br><br>
 
 
 <h6>3/27 수업 & 3/29 수업 초반, 3/31 정리 복습</h6>
