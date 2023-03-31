@@ -37,8 +37,9 @@
     });
 </script>
 ```
-<img src="/Img/JS7_1-1.png" width="250px">
-<img src="/Img/JS7_1-2.png" width="250px">
+<div>
+<img src="/Img/JS7_1-1.png" width="300px"> <img src="/Img/JS7_1-2.png" width="300px">
+</dvi>
 
 <br>
 
@@ -89,8 +90,8 @@
     })
 </script>
 ```
-<img src="/Img/JS7_2-1.png" width="250px">
-<img src="/Img/JS7_2-2.png" width="250px">
+<img src="/Img/JS7_2-1.png" width="300px">
+<img src="/Img/JS7_2-2.png" width="300px">
 <br>
 
 ```html
