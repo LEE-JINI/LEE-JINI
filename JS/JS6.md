@@ -263,8 +263,6 @@ value="구글 검색">
 <br>
 
 
-<br><br>
-
 **이벤트**  
 웹페이지 내에서 유저의 행위  
 ex) 클릭, 스크롤, 터치 등
@@ -278,14 +276,9 @@ ex) 클릭, 스크롤, 터치 등
     }) // 화살표 함수
 </script>
 ```
-<img src="/Img/JS6_5.png" width="250px">
+<img src="/Img/JS6_5.png" width="300px">
 
 <br>
-
-
-<br><br>
-
-<br><br>
 
 **캔버스 API**  
 html에서 자바스크립트를 이용해서 그래픽 표현 가능  
@@ -320,12 +313,9 @@ html에서 자바스크립트를 이용해서 그래픽 표현 가능
 
 </script>
 ```
-<img src="/Img/JS6_6.png">
+<img src="/Img/JS6_6.png" height="150px">
 
 <br>
-
-
-<br><br>
 
 
 <h6>3/27 수업 & 3/29 수업 초반, 3/31 정리 복습</h6>
