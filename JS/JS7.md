@@ -9,6 +9,7 @@
 
 <br>
 
+**1. classList.toggle()**
 ```html
 <h1> 강의가 맘에 듭니다. </h1>
 
@@ -43,6 +44,7 @@
 
 <br><br>
 
+**2. classList.add()**
 ```html
 <h1> 더보기 버튼 </h1>
 
@@ -95,6 +97,7 @@
 
 <br><br>
 
+**3. document.documentElement.scroll**
 ```html
 <style>
     html { 
@@ -168,6 +171,7 @@
 
 <br><br>
 
+**4. attribute 업데이트**
 ```html
 <style>
     #con {
