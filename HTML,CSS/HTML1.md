@@ -9,11 +9,12 @@ HTML
 
 
 **html 태그의 특징**  
+```
 <html></html> : 시작태그와 종료 태그가 모두 있는 경우  
 <br> : 시작 태그만 있는 경우  
 - 태그와 속성은 대소문자 구분 없음  
 - 속성 값에 불필요한 공백 문자, html5 표준에 어긋남  
-
+```
 <br>
 
 글자태그 h1~h6 , p , br, hr, a, b, i, small, sub, ins, del  
@@ -22,13 +23,13 @@ HTML
 미디어태그 img , audio, video  
 
 <br>
-
+```
 <p> 태그 : 단락 나누기  
 <hr> 태그 : 수평선 긋기  
 <br> 태그 : 줄바꿈  
 <pre> 태그  : 개발자 포맷 그대로 출력  
 <span> 태그 : 한 부분만 스타일 적용  
-
+```
 <br>
 
 예약어, 키보드로 입력이 어려운 기호들 > 엔터티, 코드값 사용  
@@ -57,13 +58,14 @@ HTML
 ex) 사진 : 사진찍은 장소, 시간 등..  
 
 <br>
-
+```
 html 메타 데이터를 담기 위한 태그  
 <base>, <link>, <script>, <style>, <title>, <meta>  
-
+```
 <br>
-
+```
 <base> 태그 : 기본 url 과 페이지 출력될 윈도우 지정  
+```
 ```html
 <a href="http://www.mysite.com/score/math.html">수학</a>
 <a href="http://www.mysite.com/score/science.html">과학</a>
@@ -78,13 +80,13 @@ html 메타 데이터를 담기 위한 태그
 
 <br>
 
-
+```
 <link> 태그 : 외부 자원 연결에 사용  
 <link type="text/css" rel="stylesheet" href="mystyle.css">  
-
+```
 <br>
 
-
+```
 <meta> 태그 : 다양한 메타 데이터 표현  
 웹 페이지의 저작자, 인코딩 방식, 내용 등...  
 <meta name="author" content="황기태">  
@@ -93,12 +95,14 @@ html 메타 데이터를 담기 위한 태그
 - 웹 페이지의 키워드 ( 검색엔진에 의해 검색됨 )  
 <meta charset=“utf-8”>  
 - 웹 페이지에 사용하는 문자 코드 지정  
-
+```
 <br>
 
 
 **이미지 삽입**  
+```
 <img> 태그의 속성 src , alt, width, height  
+```
 src = "이미지 파일의 url"  
 alt = "이미지 없거나 손상시 대체되는 문자열"  
 
@@ -130,6 +134,7 @@ start : 마커의 시작 값
 
 
 **표 태그**  
+```
 <table> : 표 컨테이너  
 <caption> : 표 제목, 반드시 첫 번째로 삽입   
 <thead> : 헤딩 셀 그룹  
@@ -142,7 +147,7 @@ start : 마커의 시작 값
 <td> : 행의 값, ( 열 )  
 
 <td> : 데이터 셀  
-
+```
 
 <table border="1"> 
 	<caption>1학기 성적</caption>
@@ -184,11 +189,13 @@ rowspan 세로 병합
 
 <br>
 
-미디어 태그  
-<marquee> </marquee>   
+미디어 태그 
+``` 
+<marquee> </marquee>  
+``` 
 화면에 문자열이 지나가는 효과를 주려고 하는 경우 사용  
 
-<a> 태그의 속성  
+a 태그의 속성  
 href : 이동할 html 페이지 url 또는 html 페이지 내 앵커 이름   
 
 target : 링크에 연결된 html 페이지가 출력될 윈도우 이름 지정  
