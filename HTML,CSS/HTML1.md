@@ -158,6 +158,9 @@ start : 마커의 시작 값
 
 <td> : 데이터 셀  
 ```
+<br>
+
+**표 예제**
 
 <table border="1"> 
 	<caption>1학기 성적</caption>
@@ -194,10 +197,10 @@ start : 마커의 시작 값
 
 <br>
 
-**미디어 태그 **
+**미디어 태그**  
 화면에 문자열이 지나가는 효과를 주려고 하는 경우 사용  
 
-**a 태그의 속성  **
+**a 태그의 속성**  
 href : 이동할 html 페이지 url 또는 html 페이지 내 앵커 이름   
 target : 링크에 연결된 html 페이지가 출력될 윈도우 이름 지정  
   - _blank : 새 윈도우에서 열기
@@ -205,6 +208,7 @@ target : 링크에 연결된 html 페이지가 출력될 윈도우 이름 지정
   - _parent : 부모 윈도우에서 열기
   - _top : 브라우저 윈도우 에서 열기 ( 최상위 브라우저 윈도우)
 
+<br>
 
 target 속성 사용 예  
 링크 클릭시 frame1 이름의 프레임에 http://www.w3c.org 출력  
@@ -217,10 +221,10 @@ target 속성 사용 예
 <a href="http://www.w3c.org" target="_blank">W3C</a>
 ```
 
-**1. 절대경로  **  
+**1. 절대경로**  
 http ://naver.com - 네이버의 메인 페이지  
 /animal.jpg - 현재 웹 사이트 최상위 위치(root)의 animal.jpg 파일  
-**2. 상대경로  **  
+**2. 상대경로**  
 animal.jpg - 현재 폴더의 animal.jpg  
 image/animal.jpg – 현재 폴더 하위에 있는 image 폴더에서 읽어옴  
 ../animal.jpg - 웹 페이지가 있는 폴더의 상위 폴더에 있는 파일  
@@ -230,13 +234,17 @@ image/animal.jpg – 현재 폴더 하위에 있는 image 폴더에서 읽어옴
 
 <br>
 
-**앵커란?**
+**앵커란?**  
 html 페이지 내의 특정 위치  
 ```html
 <a id="앵커이름">서론</a>  
 <a href=“#앵커이름”>서론으로 가기</a>  
 서론으로 가기 누르면 서론으로 이동함.
 ```
+
+<br>
+
+**앵커 예제**
 
 <ul>
 	<li><a href="#love">Love me tender</a>
