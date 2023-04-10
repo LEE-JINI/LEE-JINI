@@ -228,7 +228,7 @@ arribute 속성
     <a href="#">개인정보 처리방침</a>
   </footer> -->
 
-  <h1>Form (양식)</h1>
+  <!-- <h1>Form (양식)</h1>
   <p>유저로부터 데이터를 입력받는다</p>
 
   <style>
@@ -256,7 +256,7 @@ arribute 속성
       </label>
     </div>
     <button type="submit">전송하기</button>
-  </form>
+  </form> -->
 
   <!-- <h1>img</h1>
   <p>이미지를 추가한다</p>
@@ -289,5 +289,3 @@ arribute 속성
     <li>&#34;</li>
     <li>&#169;</li>
   </ul> -->
-</body>
-</html>
