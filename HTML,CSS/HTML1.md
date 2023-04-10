@@ -360,6 +360,19 @@ header, nav, article, sectiom, ul li, table, div, hr, foother
   </div>
   ```
 
+
+
+  <h1>hr</h1>
+  <p>horizontal rule (수평선)</p>
+  <hr>
+  <h1>세계맥주</h1>
+  <ul>
+    <li>기네스</li>
+    <li>하이네켄</li>
+    <li>버드와이저</li>
+  </ul>
+  <hr>
+
   ```html
    <h1>hr</h1>
   <p>horizontal rule (수평선)</p>
