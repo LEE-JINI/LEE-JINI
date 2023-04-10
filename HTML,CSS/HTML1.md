@@ -1,10 +1,12 @@
 
-<br><br>
-
-#1  
-HTML 
-
+<br> 
+<h1>HTML</h1>
 <br>
+
+#1
+HTML 태그
+ 
+<br><br>
 
 
 **html 태그의 특징**  
