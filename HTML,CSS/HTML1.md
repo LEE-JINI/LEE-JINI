@@ -194,8 +194,8 @@ start : 마커의 시작 값
 ```
 셀 병합 속성 : colspan 가로 병합, rowspan 세로 병합 
 
-<img src="/Img/H1_테이블%20속성.png.png" width="700px">
-<img src="/Img/H1_테이블%20태그.png엔터티.png" width="700px">
+<img src="/Img/H1_테이블%20속성.png" width="700px">
+<img src="/Img/H1_테이블%20태그.png" width="700px">
 
 <br><br>
 
@@ -207,7 +207,7 @@ target : 링크에 연결된 html 페이지가 출력될 윈도우 이름 지정
   - _parent : 부모 윈도우에서 열기
   - _top : 브라우저 윈도우 에서 열기 ( 최상위 브라우저 윈도우)
 
-<img src="/Img/H1_윈도우%20정리.png.png" width="700px">
+<img src="/Img/H1_윈도우%20정리.png" width="700px">
 
 <br>
 
