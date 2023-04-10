@@ -1,33 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML 기초</title>
-</head>
-<body>
 
-  <!-- <h1>hello html</h1> -->
+ <h1>hello html</h1>
+
+HTML 의 구조
+element 엘리먼트
+HTML 문서를 개발하기 위한 재료
+
+트리
+엘리먼트의 부모, 자식 및 형제 관계의 구조
+
+arribute 속성
+엘리먼트의 기능을 확장한다
 
 
-  <!-- <h1>HTML의 구조</h1>
-  <h3>element(엘리먼트)</h3>
-  <p>HTML 문서를 개발하기 위한 재료</p>
-  <h3>트리</h3>
-  <p>엘리먼트의 부모(parent), 자식(children) 및 형제(sibling)관계의 구조</p>
-  <h3>attribute(속성)</h3>
-  <p>엘리먼트의 기능을 확장한다</p>
-  <hr>
   <article>
     <h3>세계 맥주</h3>
     <ul>
@@ -37,7 +21,8 @@
       <li>하이네켄</li>
       <li>버드와이저</li>
     </ul>
-  </article> -->
+  </article>
+
 
   
   <!-- <h1>엘리먼트</h1>
