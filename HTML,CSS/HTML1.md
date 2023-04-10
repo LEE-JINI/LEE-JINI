@@ -1,6 +1,11 @@
+<br>
+
 
 #1  
 HTML 의 구조  
+
+<br>
+
 element 엘리먼트  
 HTML 문서를 개발하기 위한 재료  
 
@@ -10,6 +15,7 @@ HTML 문서를 개발하기 위한 재료
 arribute 속성  
 엘리먼트의 기능을 확장한다  
 
+<br>
 
   <article>
     <h3>세계 맥주</h3>
@@ -545,3 +551,19 @@ form, input, button
   </ul>
 
 ```
+
+
+<table border="1"> 
+	<caption>1학기 성적</caption>
+	<thead>
+		<tr><th>이름</th><th>HTML</th><th>CSS</th></tr>
+	</thead>
+	<tfoot>
+		<tr><th>합</th><th>225</th><th>230</th></tr>
+	</tfoot>
+	<tbody>
+		<tr><td>황기태</td><td>80</td><td>70</td></tr>
+		<tr><td>이재문</td><td>95</td><td>99</td></tr>
+		<tr><td>이병은</td><td>40</td><td>61</td></tr>
+	</tbody>
+</table> 
