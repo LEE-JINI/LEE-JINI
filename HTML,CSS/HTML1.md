@@ -23,6 +23,7 @@ HTML
 미디어태그 img , audio, video  
 
 <br>
+
 ```
 <p> 태그 : 단락 나누기  
 <hr> 태그 : 수평선 긋기  
@@ -30,42 +31,50 @@ HTML
 <pre> 태그  : 개발자 포맷 그대로 출력  
 <span> 태그 : 한 부분만 스타일 적용  
 ```
+
 <br>
 
 예약어, 키보드로 입력이 어려운 기호들 > 엔터티, 코드값 사용  
+
 ```
 < : &lt;
 > : &gt;
 ```
-<img src="../Img/H1_엔터티.png">
+
+<img src="/Img/H1_엔터티.png" width="300px">
+
 
 <br>
 
-**블록태그**  
-- 항상 새 라인에서 시작하여 출력  
-- 양 옆에 다른 콘테트a를 배치하지 않고 한 라인 독점 사용  
-- div, p, h1, ul 등..  
+**블록태그**
+- 항상 새 라인에서 시작하여 출력
+- 양 옆에 다른 콘테트a를 배치하지 않고 한 라인 독점 사용
+- div, p, h1, ul 등..
 
 <br>
 
-**인라인 태그**  
-- 블록 속에 삽입되어 블록의 일부로 출력  
-- span 등..  
+**인라인 태그**
+- 블록 속에 삽입되어 블록의 일부로 출력
+- span 등..
 
 <br>
 
-**메타 데이터** : 데이터를 설명하는 데이터  
-ex) 사진 : 사진찍은 장소, 시간 등..  
+**메타 데이터** : 데이터를 설명하는 데이터
+ex) 사진 : 사진찍은 장소, 시간 등..
 
 <br>
+
 ```
 html 메타 데이터를 담기 위한 태그  
 <base>, <link>, <script>, <style>, <title>, <meta>  
 ```
+
 <br>
+
 ```
 <base> 태그 : 기본 url 과 페이지 출력될 윈도우 지정  
 ```
+
 ```html
 <a href="http://www.mysite.com/score/math.html">수학</a>
 <a href="http://www.mysite.com/score/science.html">과학</a>
@@ -84,6 +93,7 @@ html 메타 데이터를 담기 위한 태그
 <link> 태그 : 외부 자원 연결에 사용  
 <link type="text/css" rel="stylesheet" href="mystyle.css">  
 ```
+
 <br>
 
 ```
@@ -96,6 +106,7 @@ html 메타 데이터를 담기 위한 태그
 <meta charset=“utf-8”>  
 - 웹 페이지에 사용하는 문자 코드 지정  
 ```
+
 <br>
 
 
