@@ -336,7 +336,7 @@ header, nav, article, sectiom, ul li, table, div, hr, foother
   </table>
   ```
 
-    <h1>div</h1>
+  <h1>div</h1>
   <p>divide (나눈다)</p>
   <div>
     <h3>기네스</h3>
@@ -346,6 +346,7 @@ header, nav, article, sectiom, ul li, table, div, hr, foother
     <h3>하이네켄</h3>
     <p>하이네켄은 네덜란드 맥주이다</p>
   </div>
+
   ```html
   <h1>div</h1>
   <p>divide (나눈다)</p>
@@ -371,6 +372,14 @@ header, nav, article, sectiom, ul li, table, div, hr, foother
   </ul>
   <hr>
   ```
+
+  <h1>footer</h1>
+  <p>웹페이지의 최하단 부분</p>
+  <footer>
+    <p>2023 &copy; 기네스</p>
+    <a href="#">개인정보 처리방침</a>
+  </footer>
+
 
   ```html
    <h1>footer</h1>
