@@ -161,7 +161,7 @@ value="구글 검색">
     input.value="네이버 검색"
 </script>
 ```
-<img src="/Img/JS6_1.png" width="250px">
+<img src="../Img/JS/JS6_1.png" width="250px">
 
 <br>
 
@@ -201,7 +201,7 @@ value="구글 검색">
 </script>
 
 ```
-<img src="/Img/JS6_2.png" width="250px">
+<img src="../Img/JS/JS6_2.png" width="250px">
 
 <br>
 
@@ -225,7 +225,7 @@ value="구글 검색">
     console.log(li); // foo bar baz
 </script>
 ```
-<img src="/Img/JS6_3.png" width="250px">
+<img src="../Img/JS/JS6_3.png" width="250px">
 
 <br>
 
@@ -258,7 +258,7 @@ value="구글 검색">
 
 </script>
 ```
-<img src="/Img/JS6_4.png" width="250px">
+<img src="../Img/JS/JS6_4.png" width="250px">
 
 <br>
 
@@ -276,7 +276,7 @@ ex) 클릭, 스크롤, 터치 등
     }) // 화살표 함수
 </script>
 ```
-<img src="/Img/JS6_5.png" width="300px">
+<img src="../Img/JS/JS6_5.png" width="300px">
 
 <br>
 
@@ -313,7 +313,7 @@ html에서 자바스크립트를 이용해서 그래픽 표현 가능
 
 </script>
 ```
-<img src="/Img/JS6_6.png" height="150px">
+<img src="../Img/JS/JS6_6.png" height="150px">
 
 <br>
 
