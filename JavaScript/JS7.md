@@ -39,7 +39,7 @@
 </script>
 ```
 <div>
-<img src="/Img/JS7_1-1.png" width="300px"> <img src="/Img/JS7_1-2.png" width="300px">
+<img src="../Img/JS/JS7_1-1.png" width="300px"> <img src="/Img/JS7_1-2.png" width="300px">
 </dvi>
 
 <br><br>
@@ -92,8 +92,8 @@
     })
 </script>
 ```
-<img src="/Img/JS7_2-1.png" width="300px">
-<img src="/Img/JS7_2-2.png" width="300px">
+<img src="../Img/JS/JS7_2-1.png" width="300px">
+<img src="../Img/JS/JS7_2-2.png" width="300px">
 
 <br><br>
 
@@ -166,8 +166,8 @@
     })
 </script>
 ```
-<img src="/Img/JS7_3-1.png" width="50px"> >
-<img src="/Img/JS7_3-2.png" width="350px">
+<img src="../Img/JS/JS7_3-1.png" width="50px"> >
+<img src="../Img/JS/JS7_3-2.png" width="350px">
 
 <br><br>
 
@@ -226,8 +226,8 @@
     })
 </script>
 ```
-<img src="/Img/JS7_4-1.png" width="300px">
-<img src="/Img/JS7_4-2.png" width="300px">
+<img src="../Img/JS/JS7_4-1.png" width="300px">
+<img src="../Img/JS/JS7_4-2.png" width="300px">
 
 
 <h6>3/29 수업, 3/31 정리 복습</h6>
