@@ -110,61 +110,117 @@
 
 ```
 
-```html
- <style>
-        #list {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-        .item {
-            padding: 0.5rem;
-        }
 
-        #search {
-            width: 20rem;
-            padding: 0.5rem;
-        }
+<style>
+    #list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .item {
+        padding: 0.5rem;
+    }
 
-        .hidden {
-            display: none;
-        }
-    </style>
+    #search {
+        width: 20rem;
+        padding: 0.5rem;
+    }
 
-    <h1> 실시간 검색</h1>
-    <input id="search" type="text" placeholder="검색">
+    .hidden {
+        display: none;
+    }
+</style>
 
-    <ul id="list">
-        <li class="item">Guinness</li>
-        <li class="item">Heineken</li>
-        <li class="item">Budwiser</li>
-        <li class="item">Kloud</li>
-        <li class="item">Asahi</li>
-    </ul>
+<h1> 실시간 검색</h1>
+<input id="search" type="text" placeholder="검색">
 
-    <script>
+<ul id="list">
+    <li class="item">Guinness</li>
+    <li class="item">Heineken</li>
+    <li class="item">Budwiser</li>
+    <li class="item">Kloud</li>
+    <li class="item">Asahi</li>
+</ul>
 
-        var search = document.getElementById('search');
+<script>
 
-        search.addEventListener('keyup', (e) => {
-            // attribute (value)
-            var value = e.target.value.toLowerCase(); // search 에 입력된 값
-            var items = document.getElementsByClassName('item');
-            console.log(value);
+    var search = document.getElementById('search');
 
-            for (var i = 0; i < items.length; i++) {
-                var item_con = items[i].textContent.toLowerCase();
+    search.addEventListener('keyup', (e) => {
+        // attribute (value)
+        var value = e.target.value.toLowerCase(); // search 에 입력된 값
+        var items = document.getElementsByClassName('item');
+        console.log(value);
 
-                if (item_con.includes(value)) {
-                    // 해당 아이템을 보이게 한다
-                    items[i].classList.remove('hidden');
-                } else {
-                    // 해당 아이템을 보이지 않게 한다
-                    items[i].classList.add('hidden');
-                }
+        for (var i = 0; i < items.length; i++) {
+            var item_con = items[i].textContent.toLowerCase();
+
+            if (item_con.includes(value)) {
+                // 해당 아이템을 보이게 한다
+                items[i].classList.remove('hidden');
+            } else {
+                // 해당 아이템을 보이지 않게 한다
+                items[i].classList.add('hidden');
             }
-        })
-    </script>
+        }
+    })
+</script>
+
+```html
+<style>
+    #list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .item {
+        padding: 0.5rem;
+    }
+
+    #search {
+        width: 20rem;
+        padding: 0.5rem;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<h1> 실시간 검색</h1>
+<input id="search" type="text" placeholder="검색">
+
+<ul id="list">
+    <li class="item">Guinness</li>
+    <li class="item">Heineken</li>
+    <li class="item">Budwiser</li>
+    <li class="item">Kloud</li>
+    <li class="item">Asahi</li>
+</ul>
+
+<script>
+
+    var search = document.getElementById('search');
+
+    search.addEventListener('keyup', (e) => {
+        // attribute (value)
+        var value = e.target.value.toLowerCase(); // search 에 입력된 값
+        var items = document.getElementsByClassName('item');
+        console.log(value);
+
+        for (var i = 0; i < items.length; i++) {
+            var item_con = items[i].textContent.toLowerCase();
+
+            if (item_con.includes(value)) {
+                // 해당 아이템을 보이게 한다
+                items[i].classList.remove('hidden');
+            } else {
+                // 해당 아이템을 보이지 않게 한다
+                items[i].classList.add('hidden');
+            }
+        }
+    })
+</script>
 ```
   
 ```html
