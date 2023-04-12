@@ -4,7 +4,6 @@
 <br>
 
 #6  
-JS 와 HTML  
 window 객체  
 선택자  
 속성과 메소드  
