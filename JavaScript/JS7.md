@@ -39,7 +39,8 @@
 </script>
 ```
 <div>
-<img src="../Img/JS/JS7_1-1.png" width="300px"> <img src="/Img/JS7_1-2.png" width="300px">
+<img src="../Img/JS/JS7_1-1.png" width="300px">
+<img src="../Img/JS/JS7_1-2.png" width="300px">
 </dvi>
 
 <br><br>
