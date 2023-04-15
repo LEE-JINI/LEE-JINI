@@ -213,7 +213,7 @@
 
 <img src="../Img/DC/DC1_링형.png" width="700px">
 
-혼합형(Hybrid)
+혼합형(Hybrid)  
 <img src="../Img/DC/DC1_하이브리드형.png" width="700px">
 
 
