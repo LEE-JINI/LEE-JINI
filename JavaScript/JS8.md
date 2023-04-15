@@ -55,7 +55,7 @@
     })
 </script>
 ```
-<img src="../Img/JS/JS8_1.png">
+<img src="../Img/JS/JS8_1.png" width="700px">
 
 <br><br>
 
@@ -117,7 +117,7 @@
     })
 </script>
 ```
-<img src="../Img/JS/JS8_2.png">
+<img src="../Img/JS/JS8_2.png" width="700px">
   
 <br><br>
 <h1> Contact Form </h1>
@@ -220,7 +220,7 @@
     }
 </script>
 ```
-<img src="../Img/JS/JS8_3.png" width="500px">
+<img src="../Img/JS/JS8_3.png" width="700px">
 
 <br><br>
 
@@ -279,7 +279,7 @@
 
 </script>
 ```
-<img src="../Img/JS/JS8_4.png">
+<img src="../Img/JS/JS8_4.png" width="700px">
 
 <br><br>
 
@@ -371,7 +371,7 @@ btn.addEventListener('click', (e) => {
 
 </script>
 ```
-<img src="../Img/JS/JS8_5.png">
+<img src="../Img/JS/JS8_5.png" width="700px">
 
 <br><br>
 
@@ -494,5 +494,7 @@ btn.addEventListener('click', (e) => {
 
   </script>
   ```
-  
+
+<br>
+
 <h6>3/31 수업 & 4/3 수업, 4/12 정리 복습</h6>
