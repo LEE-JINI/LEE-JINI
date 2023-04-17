@@ -237,7 +237,7 @@ text-decoration: none, underline, overline, line-throuht / 텍스트 꾸미기
 
 <br><br>
 
-**css3의 표준 단위**
+**css3의 표준 단위**  
 <img src="../Img/HTML&CSS/CSS1_6.png" width="700px">
 
 <br><br>
@@ -271,8 +271,8 @@ HTML 태그는 사각형 박스로 다루어진다
 - outset : 외부 그림자
 
 <br>
-
-**둥근 모서리 테두리 만들기**
+ 
+**둥근 모서리 테두리 만들기**  
 <img src="../Img/HTML&CSS/CSS1_8.png" width="700px">
 
 <br>
@@ -280,6 +280,7 @@ HTML 태그는 사각형 박스로 다루어진다
 **이미지 테두리 만들기**
 - 모서리와 에지로 구분하여 각각 이미지 입힘
 - border-width 과 border-style 역시 미리 지정 필요
+
 <img src="../Img/HTML&CSS/CSS1_9.png" width="700px">
 
 <br>
@@ -327,7 +328,7 @@ HTML 태그는 사각형 박스로 다루어진다
 
 <br>
 
-**마우스 커서 제어**
+**마우스 커서 제어**  
 <img src="../Img/HTML&CSS/CSS1_10.png" width="700px">
 ```html
 <p style="cursor: crosshair">십자 모양 커서</p>
