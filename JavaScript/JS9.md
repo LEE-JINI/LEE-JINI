@@ -495,41 +495,41 @@
     var previousIndex = 0;
     var imageWidth = 200;
 
-    function navigateTo(data) {
+  function navigateTo(data) {
 
-        thisIndex += data;
-        // 입력 값 받아와서 저장하기
+      thisIndex += data;
+      // 입력 값 받아와서 저장하기
 
-        console.log(thisIndex);
+      console.log(thisIndex);
 
-        // 이미지 움직이기
-        con.style.transform = `translateX(-${thisIndex * imageWidth}px)`;
-        // translateX("-" + (thisIndex * imageWidth) + "px") 위의 식과 같은 의미
+      // 이미지 움직이기
+      con.style.transform = `translateX(-${thisIndex * imageWidth}px)`;
+      // translateX("-" + (thisIndex * imageWidth) + "px") 위의 식과 같은 의미
 
-        // 버튼 토글
-        if (thisIndex === 0) { // 첫번째 이미지에 있는 경우
-            prev.classList.add('hidden');
-        } else {
-            prev.classList.remove('hidden');
-        }
+      // 버튼 토글
+      if (thisIndex === 0) { // 첫번째 이미지에 있는 경우
+          prev.classList.add('hidden');
+      } else {
+          prev.classList.remove('hidden');
+      }
 
-        if (thisIndex === 2) { // 마지막 이미지 일때
-            next.classList.add('hidden');
-        } else {
-            next.classList.remove('hidden');
-        }
+      if (thisIndex === 2) { // 마지막 이미지 일때
+          next.classList.add('hidden');
+      } else {
+          next.classList.remove('hidden');
+      }
 
-        // indicator
-        dot[thisIndex].classList.add('active');
-        dot[previousIndex].classList.remove('active');
-
-
-        // 이전 인덱스값 구하기 ( 이전 인덱스 값의 현재 인덱스 저장해주면
-        //  다음에 받는 현재 인덱스 값이 이전 인택스 값 알 수 있음)
-        previousIndex = thisIndex;
+      // indicator
+      dot[thisIndex].classList.add('active');
+      dot[previousIndex].classList.remove('active');
 
 
-    }
+      // 이전 인덱스값 구하기 ( 이전 인덱스 값의 현재 인덱스 저장해주면
+      //  다음에 받는 현재 인덱스 값이 이전 인택스 값 알 수 있음)
+      previousIndex = thisIndex;
+
+
+  }
 
 </script>
 ```
