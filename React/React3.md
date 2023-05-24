@@ -15,121 +15,283 @@
 <br>
 
 ```javascript
-import React, { useEffect, useRef, useState } from 'react';
-import Chart from 'chart.js/auto';
+import './App.css';
+import { useState, useEffect, useRef } from 'react';
 
-const apiUrl = `http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty`;
-const serviceKey = 'S9dwnUfVwm8%2FDBGjdL7fJ78YXnxqwUdIpBCU3RwTlTiJ7pEjm0eWlVN3JRdM9Xaj5RJNh1zyjyJAYfw7ZOXREw%3D%3D';
-const TType = 'json';
-const numOfRows = 100;
-const pageNo = 1;
-const ver = 1.0;
+// 필터 조건
+const FILTER_MAP = {
+  All: () => true,
+  Done: (task) => task.completed, // 완료된것만
+  Active: (task) => !task.completed // 완료되지 않은 것만
+}
 
+// Object.keys(객체): 객체의 속성 이름을 문자열 배열로 리턴한다.
+// all, done , active
+const FILTER_NAMES = Object.keys(FILTER_MAP);
+
+// 로컬 스토리지 동기화하는 함수
+function saveDoc(tasks){
+  localStorage.setItem("tasks", tasks); // tasks 라는 키를 가진 로컬 스토리지를 찾아서 동기화 함.
+}
+
+// tasks 변수의 초기값, localStorage tasks 으면 [] 가져옴
+const initialTasks = localStorage.getItem("tasks") || "[]";
+
+
+// 메인 컴포넌트
 export default function App() {
-  const chartRef = useRef(null);
-  const [selectedRegion, setSelectedRegion] = useState('서울');
-  const [chartType, setChartType] = useState('line');
-  const [dataTime, setDataTime] = useState('');
-  const [chartData, setChartData] = useState({ labels: [], values: [] });
-  const chartInstance = useRef(null);
 
-  useEffect(() => {
-    fetchData(selectedRegion)
-      .then(data => {
-        const labels = data.map(item => item.stationName);
-        const values = data.map(item => item.pm10Value);
+  // JSON.parse JSON 포맷을 js 객체 형태로 반환 해줌.
+    const [tasks, setTasks] = useState(JSON.parse(initialTasks)); // tasks 있으면 localStorage 저장된 값 가져옴
+    const [filter, setFilter] = useState("All");
+    console.log(tasks); // 추적
+    console.log(filter); // all , 초기값 all 줘서
 
-        setChartData({ labels, values });
-        setDataTime(data[0].dataTime); // 첫 번째 항목의 dataTime 값을 설정
-      })
-      .catch(error => {
-        console.log('Error:', error);
-      });
-  }, [selectedRegion]);
-
-  function handleRegionChange(event) {
-    setSelectedRegion(event.target.value);
-  }
-
-  function handleChartTypeChange(event) {
-    setChartType(event.target.value);
-  }
-
-
-  // api 요청
-  function fetchData(region) {
-    const url = `${apiUrl}?sidoName=${encodeURIComponent(region)}&pageNo=${pageNo}&numOfRows=${numOfRows}&returnType=${TType}&serviceKey=${serviceKey}&ver=${ver}`;
-
-    return fetch(url)
-      .then(response => response.json())
-      .then(result => {
-        if (result.response.header.resultCode === '00') {
-          return result.response.body.items;
-        } else {
-          throw new Error(result.response.header.resultMsg);
-        }
-      });
-  }
-
-  useEffect(() => {
-    if (chartRef.current && chartData.labels.length > 0) {
-      // 이전 차트 제거
-      if (chartInstance.current) {
-        chartInstance.current.destroy();
+    // 할일 추가 함수
+    function addTask(name){
+      const newTask ={
+        id: `todo-${Date.now()}`, // 현재 시간을 ms 로 나타내는 함수
+        name,
+        completed: false
       }
 
-      // 새로운 차트 생성
-      const ctx = chartRef.current.getContext('2d');
-      chartInstance.current = new Chart(ctx, {
-        type: chartType,
-        data: {
-          labels: chartData.labels,
-          datasets: [
-            {
-              label: 'PM10',
-              data: chartData.values,
-              backgroundColor: chartType === 'bar' ? 'rgba(54, 162, 235, 0.5)' : 'rgba(255, 99, 132, 0.5)',
-              borderColor: chartType === 'bar' ? 'rgba(54, 162, 235, 1)' : 'rgba(255, 99, 132, 1)',
-              borderWidth: 1,
-            },
-          ],
-        },
-        options: {
-          responsive: true,
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
-        },
-      });
+      // 업데이트 하는코드 , 최신 문법 기존의 tasks + newTask 해서 변수에 담는다.
+      const updateTasks = [...tasks, newTask];
+
+      setTasks(updateTasks);
+
+      // 로컬스토리지 동기화, updateTasks 는 js 객체인데 로컬 스토리지에 js 객체는 저장 못 해서 json 으로 변환해줌.
+      saveDoc(JSON.stringify(updateTasks));
     }
-  }, [chartData, chartType]);
+
+    // 할일 삭제 함수
+    function deleteTask(id) {
+
+      // 전달받은 id 와 일치하지 않는 id를 가진 task 만 리턴.
+       // filter 메소드도 반복문 같음. 리턴값이 true 인 것을 기반으로 새로운 배열을 만드는 함수. 콜백함수
+        const remainingTasks = tasks.filter(task => task.id !==id);
+        setTasks(remainingTasks);
+        saveDoc(JSON.stringify(remainingTasks));
+    }
+
+    // 할일의 완료 상태 다루는 함수
+    function toggleTaskCompleted(id) {
+      const updatedTasks = tasks.map(task => {
+        if (task.id === id) {
+          return { ...task, completed: !task.completed };
+        }
+        return task;
+      });
+    
+      setTasks(updatedTasks);
+      saveDoc(JSON.stringify(updatedTasks));
+    }
+    
+
+    // 할일 수정 함수
+    function editTask(id, newName){
+      const editedTasks = tasks.map(task => {
+        if(task.id === id){
+          return {...task, name: newName}
+        }
+        return task;
+      })
+      setTasks(editedTasks);
+      saveDoc(JSON.stringify(editedTasks));
+    }
+
+
+    // 필터버튼 , 리스트 출력할 때 컴포넌트 사용
+    const filterButtons = FILTER_NAMES.map( name => (
+      <FilterButton
+      key={name}
+      name={name}
+      isPressed={filter == name}
+      setFilter={setFilter} />
+    ))
+
+    // 할일 목록, 출력할 트리를 변수에 담아둠. map은 key가 꼭 필요함!
+    // FILTER_MAP[filter]: 필터링 조건
+    const taskList = tasks.filter(FILTER_MAP[filter]).map(task => (
+      <Todo
+        key={task.id}
+        id={task.id}
+        name={task.name}
+        completed={task.completed}
+        deleteTask={deleteTask}
+        toggleTaskCompleted={toggleTaskCompleted}
+        editTask={editTask} />
+    ))
+
+    return (
+      <div className="app-container">
+        {/* 제목 */}
+        <h1 className="app-title"> 할일 목록 </h1>
+
+        {/* 폼 */}
+        <Form addTask={addTask} />
+
+        {/* 필터 버튼 */}
+        <div className="filter-btn-group">
+          {filterButtons}
+        </div>
+
+        {/* 할일 목록 */}
+        <h2 className="remaining"> {taskList.length} 개 남았습니다.</h2>
+        <ul>
+          {taskList}
+        </ul>
+
+      </div>
+    )
+}
+
+// 폼 컴포넌트
+function Form({addTask}) {
+
+  // 컴포넌트 내에서만 접근 가능.
+  const [name, setName] = useState("");
+
+  function handleSubmit(e) {
+
+    e.preventDefault();
+
+    // app 메인 컴포넡트에 있는 함수
+    addTask(name);
+
+    setName(""); // 폼 제출시 input 비운다.
+
+  }
 
   return (
-    <div>
-      <h1>미세먼지(PM10) 농도</h1>
-      <div>
-        <select value={selectedRegion} onChange={handleRegionChange}>
-          <option value="서울">서울</option>
-          <option value="부산">부산</option>
-          <option value="대구">대구</option>
-          <option value="인천">인천</option>
-          {/* 추가적인 지역 옵션을 필요에 따라 추가 */}
-        </select>
+    <form className="todo-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className="add-input"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        autoComplete="off"
+      />
+      <button
+        type="submit"
+        disabled={!name.trim()} // 빈문자열이 아니면 활성화 됨.
+        className="add-btn" > 추가 </button>
+    </form>
+  )
+}
+
+// 필터 버튼
+// name, isPressed, setFilter 전달 받았음. map 으로 3개 불러 왔었음.
+// 생성된 버튼 하나하나가 필터 컴포넌트
+function FilterButton( { name, isPressed, setFilter}) {
+  return (
+    <button className={`filter-btn ${isPressed && "active"}`}
+      onClick={() => setFilter(name)}>
+      {name}
+    </button>
+  )
+
+}
+
+// Todo 컴포넌트
+function Todo({id, name, completed, deleteTask, toggleTaskCompleted, editTask}) {
+
+
+  // 템플릿 상태를 결정하는 변수
+  const [isEditing, setIsEditing] = useState(false);
+  // 새로운 할 일 이름
+  const [newName, setNewName] = useState("");
+
+  // useRef Hook : 엘리먼트 접근
+  const inputEl = useRef(null); // 실제 값을 전달하기 전 까지 useRef 초기값은 null
+  // 이벤트 효과
+  useEffect(() => {
+      // 수정중일때
+      if(isEditing) {
+        // useRef 는 current 속성에 엘리먼트를 담는다.
+        // 가상의 엘리먼트가 실제 html 에 주입되고 난 뒤에 input 접근 가능.
+          inputEl.current.focus(); // 수정 버튼 눌러서 수정상황이면 포커스 여기로.
+      }
+  })
+
+  // 업데이트 폼 제출
+  function handleSubmit(e) {
+    
+    e.preventDefault();
+
+    editTask(id, newName);
+
+    // 수정 후 다시 뷰 템플릿으로 이동.
+    setIsEditing(false);
+    setNewName("");
+  }
+
+
+
+  const viewTemplate = (
+    <div className="view-template">
+      {/* 할일 이름 */}
+      <div className="todo-details">
+        <input
+          type="checkbox"
+          id={id}
+          className="todo-checkbox"
+          // 이걸 추가해서 새로고침 해도 완료 결과 안 바뀌게
+          checked={completed}
+          onChange={() => toggleTaskCompleted(id)} />
+          <label htmlFor={id} className="todo-name">
+            {name}
+          </label>
       </div>
-      <div>
-        <select value={chartType} onChange={handleChartTypeChange}>
-          <option value="line">선 차트</option>
-          <option value="bar">바 차트</option>
-        </select>
-      </div>
-      <div> 측정 일시 : {dataTime}</div>
-      <div>
-        <canvas ref={chartRef}></canvas>
+
+      {/*  버튼 그룹 */}
+      <div className="view-btn-group">
+        <button className="edit-btn"
+        onClick={() => setIsEditing(true)}>
+          수정
+        </button>
+        <button className="delete-btn"
+          onClick={() => deleteTask(id)}>
+          삭제
+        </button>
       </div>
     </div>
   );
-}
 
+
+  const editingTemplate = (
+    <form onSubmit={handleSubmit} className="edit=template">
+      <input 
+        type="text"
+        className="edit-input"
+        onChange={(e) => setNewName(e.target.value)}
+        ref={inputEl} />
+
+      {/*  버튼 그룹 */}
+      <div className="edit-btn-group">
+        <button 
+          className="cancel-btn"
+          type="button"
+          onClick={() => setIsEditing(false)}>
+          취소
+        </button>
+        <button
+          type="submit"
+          className="save-btn"
+          disabled = {!newName.trim()}>
+          저장
+        </button>
+      </div>
+
+    </form>
+    
+  )
+
+  return (
+    <li className="todo-item">
+      {isEditing ? editingTemplate : viewTemplate}
+    </li>
+  )
+
+}
 ```
