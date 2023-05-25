@@ -89,6 +89,7 @@
   })
 </script>
 ```
+<img src="../Img/JS/JS9_1.png" width="700px">
 
 <br><br>
 
@@ -162,6 +163,7 @@
 
     </script>
 ```
+<img src="../Img/JS/JS9_2.png" width="700px">
 
 <br><br>
 
@@ -239,6 +241,7 @@
   })
 </script>
 ```
+<img src="../Img/JS/JS9_3.png" width="700px">
 
 <br><br>
 
@@ -331,6 +334,7 @@
 
 </script>
 ```
+<img src="../Img/JS/JS9_4.png" width="700px">
 
 <br><br>
 
@@ -399,7 +403,9 @@
 
 </script>
 ```
+<img src="../Img/JS/JS9_5.png" width="700px">
 
+<br><br>
 
 <h1>Carousel</h1>
 
@@ -545,6 +551,7 @@
 
 </script>
 ```
+<img src="../Img/JS/JS9_6.png" width="700px">
 
 <br>
 
